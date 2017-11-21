@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ZIP⇔画像変換器</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZIPファイルを画像に変換したり、逆変換したりします。Twitter等に変換した画像をアップロードすれば、ファイル共有ができます。">
+  <meta name="author" content="redshoga">
+  <meta name="keywords" content="画像, zip, 変換">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="./assets/custom.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ZIP⇔画像変換器 #zipimage</h1>
+
+    <div>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a href="https://twitter.com/redshoga?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @redshoga</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <a class="github-button" href="https://github.com/redshoga" data-size="large" aria-label="Follow @redshoga on GitHub">Follow @redshoga</a>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </div>
+
+    <section>
+      <div class="desc">ZIP⇔画像変換器とは?</div>
+      <span>ZIPファイルを画像に変換したり、逆変換したりします。Twitter等に変換した画像をアップロードすれば、ファイル共有ができます。中身の動作については<a href="" target="_blank">こちらのQiitaの記事</a>を参考にしてください。</span>
+    </section>
+
+    <section>
+      <div class="desc">1. 変換方式を選択する</div>
+      <input type="radio" id="encode-radio" name="encode" value="encode" checked> ZIP → 画像 (ZIPファイルを画像に変換)<br>
+      <input type="radio" name="encode" value="decode"> ZIP ← 画像 (画像ファイルをZIPファイルに変換)<br>
+    </section>
+
+    <section>
+      <div class="desc">2. ファイルを選択する</div>
+      <input type="file" id="file"><br>
+    </section>
+
+    <section>
+      <div class="desc">3. 画像やファイルを保存</div>
+      <div id="size-caution">※ファイルサイズが3MBを超えているため、Twitter等のアップロードした場合自動的に圧縮がかかり画像からZIPファイルに変換できない可能があります。</div>
+      <a id="dllink">変換したファイルのダウンロード</a>
+      <canvas id="canvas" width="0" height="0"></canvas>
+    </section>
+
+    <section>
+      <div class="desc">番外編 #zipimageをつけて変換した画像をつぶやこう!</div>
+      <span>ここでは、#zipimageとつけたツイートを一覧で表示しています。</span>
+      <a class="twitter-timeline"  href="https://twitter.com/hashtag/zipimage" data-widget-id="931100860213469184">#zipimage Tweets</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </section>
+  </div>
+
+  <script src="./assets/app.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109991117-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-109991117-1');
+  </script>
+</body>
+</html>

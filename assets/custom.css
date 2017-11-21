@@ -1,0 +1,37 @@
+h1 {
+  margin: 50px 0;
+  color: #1abc9c;
+  font-weight: bold;
+}
+
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 700px;
+}
+
+.desc {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-left: 5px solid #1abc9c;
+  border-bottom: 1px solid #1abc9c;
+  margin-bottom: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+#dllink {
+  display: none;
+}
+
+#size-caution {
+  display: none;
+  font-weight: bold;
+  color: #e74c3c;
+}
