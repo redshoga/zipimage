@@ -114,7 +114,7 @@ function fileChange(ev) {
   hideCaution();
 
   if ( document.getElementById("encode-radio").checked ) {
-    if(type !== "application/zip") {
+    if(!(type == "application/zip" || type == "application/x-zip-compressed")) {
       alert('変換できるファイルはZIPファイル(*.zip)です.');
       return;
     }
